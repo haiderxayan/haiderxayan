@@ -10,7 +10,7 @@ body {
 
 /* Header with Image Styles */
 .header-with-image {
-    background-image: url('https://github.com/haiderxayan/haiderxayan/blob/main/images/nitaq-digital-header-img.jpg'); /* Replace 'your-image.jpg' */
+    background-image: url('images/nitaq-digital-header-img.jpg'); /* Replace 'your-image.jpg' */
     background-size: cover;  /* Cover the entire header */
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Prevent image repetition */
