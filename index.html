@@ -11,286 +11,10 @@
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-    <style>
-      body {
-        font-family: 'Poppins', sans-serif; /* Use Poppins as the primary font */
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        background-color: #f0f4f8; /* Light background */
-        color: #333; /* Darker text for better readability */
-        line-height: 1.7;  /* Increased line height for better readability */
-      }
-      header {
-        background-color: #003366; /* Dark Blue - A strong, professional color */
-        padding: 25px 0;
-        color: white;
-        text-align: center;
-        /*box-shadow: 0 2px 5px rgba(0,0,0,0.1);  Remove subtle shadow - Flat design principle*/
-      }
-      header h1 {
-        margin: 0 0 10px 0;
-        font-size: 2.5em; /* Slightly larger heading */
-        font-family: 'Poppins', sans-serif;  /* Use Poppins for heading */
-        font-weight: 600; /* Use semi-bold for the main heading */
-        letter-spacing: -0.02em;
-      }
-      header p {
-        font-size: 1.1em;
-        font-family: 'Inter', sans-serif; /* Use Inter for the tagline */
-        font-weight: 400;
-        margin-bottom: 0;
-        color: #e0f7fa; /* Very light cyan, subtle accent */
-      }
-      nav ul {
-        list-style: none;
-        padding: 0;
-        margin: 20px 0 0 0;
-        display: flex;
-        justify-content: center;
-      }
-      nav ul li {
-        margin: 0 20px;
-      }
-      nav ul li a {
-        color: white;
-        text-decoration: none;
-        font-size: 1.2em; /* Slightly larger nav links */
-        font-family: 'Inter', sans-serif; /* Use Inter for navigation */
-        font-weight: 500; /* Use medium font weight for nav links */
-        text-transform: uppercase; /* Uppercase for nav links */
-        transition: color 0.3s ease; /* Smooth transition */
-        padding: 8px 12px; /* Add padding to nav links */
-        border-radius: 4px; /* Small border radius for nav links */
-      }
-      nav ul li a:hover {
-        color: #ffcc00; /* Gold hover color - more accessible */
-      }
-
-      section {
-        padding: 60px 0;
-        text-align: center;
-      }
-      section h2 {
-        margin: 0 0 30px 0;
-        font-size: 2.2em; /* Slightly larger heading */
-        color: #003366; /* Dark blue heading */
-        font-family: 'Poppins', sans-serif; /* Use Poppins for section headings */
-        font-weight: 600; /* Use semi-bold for section headings */
-        letter-spacing: -0.02em;
-      }
-      section p {
-        font-size: 1.1em;
-        margin: 0 auto 30px auto;
-        max-width: 800px;
-        color: #444; /* Slightly darker body text */
-        font-family: 'Inter', sans-serif;
-        line-height: 1.8; /* Increased line height for better readability in sections */
-      }
-      .services-container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        margin-top: 20px;
-      }
-      .service-card {
-        background-color: white;
-        padding: 30px;
-        margin: 20px;
-        width: 320px; /* Slightly wider service cards */
-        border-radius: 8px; /* Slightly more rounded corners */
-        /*box-shadow: 0 4px 8px rgba(0,0,0,0.08);  Subtler shadow */
-        transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; /* Added box-shadow transition */
-        text-align: left; /* Left-align service card content */
-        border: 1px solid #e0e0e0; /* Add a light border */
-      }
-      .service-card:hover {
-        transform: translateY(-5px);
-        /*box-shadow: 0 6px 12px rgba(0,0,0,0.1);  Slightly stronger shadow on hover */
-        border-color: #b0bec5; /* Slightly darker border on hover */
-      }
-      .service-card h3 {
-        margin: 0 0 15px 0;
-        font-size: 1.5em; /* Larger heading for service card title */
-        color: #003366; /* Dark blue for service title */
-        font-family: 'Poppins', sans-serif;
-        font-weight: 600; /* Semi-bold for service title */
-        letter-spacing: -0.02em;
-      }
-      .service-card p {
-        font-size: 1.1em;
-        margin: 0 0 20px 0;
-        color: #555; /* Slightly darker for service description */
-        font-family: 'Inter', sans-serif;
-        line-height: 1.7;
-      }
-      .service-card ul {
-        list-style: disc;
-        padding-left: 20px;
-        margin-bottom: 0;
-        font-size: 1.1em;
-        color: #555; /* Slightly darker for service list */
-        font-family: 'Inter', sans-serif;
-        line-height: 1.7;
-      }
-      .service-card ul li{
-         margin-bottom: 8px;
-      }
-
-      .contact-button {
-        background-color: #ffcc00; /* Gold contact button */
-        color: #003366; /* Dark blue text on button */
-        padding: 15px 30px;
-        font-size: 1.2em;
-        text-decoration: none;
-        border-radius: 6px; /* Slightly more rounded button */
-        transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease; /* Added transform */
-        font-family: 'Poppins', sans-serif;
-        font-weight: 600; /* Semi-bold button text */
-        border: none; /* Remove the border */
-        cursor: pointer; /* Add a pointer cursor on hover */
-        display: inline-block; /* Ensure it behaves as an inline-block element */
-        box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Add a subtle shadow */
-      }
-      .contact-button:hover {
-        background-color: #e5b800; /* Darker gold on hover */
-        color: #003366;
-        transform: translateY(-2px); /* Slight upward movement on hover */
-        box-shadow: 0 4px 7px rgba(0,0,0,0.15); /* Increase shadow on hover */
-      }
-
-      footer {
-        background-color: #003366; /* Dark blue footer */
-        color: white;
-        padding: 25px 0;
-        text-align: center;
-        margin-top: 60px;
-        font-family: 'Inter', sans-serif;
-        font-size: 1em;
-      }
-      footer p{
-        line-height: 1.7;
-      }
-      footer a {
-        color: #ffcc00; /* Gold link color in footer */
-        text-decoration: none;
-        transition: color 0.3s ease;
-      }
-      footer a:hover {
-        color: #e5b800; /* Darker gold on hover */
-      }
-
-      .whatsapp-button {
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        background-color: #25d366; /* WhatsApp Green */
-        color: white;
-        padding: 15px 15px; /* Slightly reduced horizontal padding */
-        border-radius: 50%;
-        font-size: 1.4em; /* Slightly larger icon */
-        text-decoration: none;
-        z-index: 1000;
-        transition: background-color 0.3s ease, transform 0.3s ease; /* Added transform transition */
-        box-shadow: 0 4px 8px rgba(0,0,0,0.15); /* Slightly stronger shadow */
-        display: flex; /* Use flexbox for centering */
-        align-items: center;
-        justify-content: center;
-        width: 56px; /* Fixed width and height for the circular button */
-        height: 56px;
-      }
-
-      .whatsapp-button:hover {
-        background-color: #128c7e; /* Darker shade of WhatsApp Green */
-        transform: scale(1.1); /* Slight scale on hover */
-        box-shadow: 0 6px 12px rgba(0,0,0,0.2); /* Increased shadow on hover */
-      }
-
-      .whatsapp-button i {
-        /* Use a font or an SVG for the WhatsApp icon.  Using a simple 'W' for demo. */
-        /* Replace with actual WhatsApp icon if you have one */
-        font-size: 1.8em; /* Adjust size as needed */
-        line-height: 1; /* Vertically center the icon */
-      }
-
-
-      @media (max-width: 768px) {
-        header h1 {
-          font-size: 2.5em; /* Slightly smaller on mobile */
-        }
-        header p {
-          font-size: 1em;
-        }
-        nav ul li {
-          margin: 10px 15px;
-        }
-        nav ul li a {
-          font-size: 1.1em;
-        }
-        section h2 {
-          font-size: 2em; /* Smaller on mobile */
-        }
-        section p {
-          font-size: 1em;
-          padding: 0 20px;
-        }
-        .services-container {
-          flex-direction: column;
-          align-items: center;
-        }
-        .service-card {
-          width: 90%;
-          margin: 20px auto;
-        }
-        footer {
-          padding: 20px;
-          font-size: 0.9em;
-        }
-        .contact-button {
-            font-size: 1em;
-            padding: 12px 25px;
-        }
-      }
-
-      @media (max-width: 480px) {
-        header h1 {
-          font-size: 2em; /* Even smaller on very small screens */
-        }
-        header p {
-          font-size: 0.9em;
-        }
-        nav ul {
-          flex-direction: column;
-          text-align: center;
-        }
-        nav ul li {
-          margin: 10px 0;
-        }
-        nav ul li a {
-          font-size: 1em;
-        }
-        section h2 {
-          font-size: 1.75em; /* Even smaller on very small screens */
-        }
-        section p {
-          font-size: 0.95em;
-        }
-        .service-card {
-          width: 95%;
-        }
-        footer {
-          font-size: 0.8em;
-        }
-        .contact-button{
-            font-size: 0.9em;
-            padding: 10px 20px;
-        }
-      }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
+    <header class="header-with-image">
         <h1>NitaqDigital</h1>
         <p>Your Partner for Digital Marketing Solutions</p>
         <nav>
@@ -309,23 +33,23 @@
                 <h3>Search Engine Optimization (SEO)</h3>
                 <p>Improve your website's visibility in search engine results and drive organic traffic.</p>
                 <ul>
-                  <li>Keyword Research</li>
-                  <li>On-Page Optimization</li>
-                  <li>Link Building</li>
-                  <li>Technical SEO</li>
-                  <li>Local SEO</li>
+                    <li>Keyword Research</li>
+                    <li>On-Page Optimization</li>
+                    <li>Link Building</li>
+                    <li>Technical SEO</li>
+                    <li>Local SEO</li>
                 </ul>
             </div>
             <div class="service-card">
                 <h3>Social Media Marketing</h3>
                 <p>Build a strong brand presence and engage with your audience on social media platforms.</p>
-                 <ul>
+                <ul>
                     <li>Strategy Development</li>
                     <li>Content Creation</li>
                     <li>Community Management</li>
                     <li>Paid Advertising</li>
                     <li>Analytics & Reporting</li>
-                 </ul>
+                </ul>
             </div>
             <div class="service-card">
                 <h3>Web Development</h3>
@@ -336,7 +60,7 @@
                     <li>Content Management Systems (CMS)</li>
                     <li>Website Maintenance</li>
                     <li>Responsive Design</li>
-                  </ul>
+                </ul>
             </div>
             <div class="service-card">
                 <h3>Content Marketing</h3>
@@ -347,7 +71,7 @@
                     <li>Video Production</li>
                     <li>E-books & Whitepapers</li>
                     <li>Content Distribution</li>
-                  </ul>
+                </ul>
             </div>
             <div class="service-card">
                 <h3>Search Engine Marketing (SEM)</h3>
@@ -358,17 +82,17 @@
                     <li>Keyword Analysis</li>
                     <li>Ad Copywriting</li>
                     <li>Conversion Tracking</li>
-                  </ul>
+                </ul>
             </div>
             <div class="service-card">
                 <h3>Analytics & Consulting</h3>
                 <p>Gain valuable insights into your marketing performance and make data-driven decisions.</p>
                 <ul>
-                  <li>Website Analytics</li>
-                  <li>Marketing ROI Analysis</li>
-                  <li>Data Visualization</li>
-                  <li>Strategic Consulting</li>
-                  <li>Reporting & Insights</li>
+                    <li>Website Analytics</li>
+                    <li>Marketing ROI Analysis</li>
+                    <li>Data Visualization</li>
+                    <li>Strategic Consulting</li>
+                    <li>Reporting & Insights</li>
                 </ul>
             </div>
         </div>
@@ -384,22 +108,9 @@
         <p>&copy; 2024 NitaqDigital. All rights reserved.  |  <a href="mailto:info@nitaqdigital.com">info@nitaqdigital.com</a></p>
     </footer>
 
-    <a href="https://wa.me/your-whatsapp-number" class="whatsapp-button" target="_blank" rel="noopener noreferrer">
+    <a href="https://wa.me/966546105410" class="whatsapp-button" target="_blank" rel="noopener noreferrer">
         <i class="fab fa-whatsapp"></i>  </a>
 
-    <script>
-        // No JavaScript needed for basic functionality, but you can add more interactivity here if desired.
-        //  For example, smooth scrolling for the navigation links.
-
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
